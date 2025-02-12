@@ -1,86 +1,106 @@
-.footer_outer_container { 
-    background-color: #111;
-    color: gray;
-    display: flex;
-    justify-content: center;
-    padding: 20px 0;
-}
-
-/* Centers the entire footer content */
-.footer_inner_container {
-    width: 60%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-/* Social Media Icons Section */
-.footer_icons {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 15px;
-    color: #fff;
-    margin-bottom: 15px;
-}
-
-.footer_icons svg {
-    font-size: 24px;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-.footer_icons svg:hover {
-    color: red;
-}
-
-/* Footer Navigation Links */
-.footer_data {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    width: 100%;
-    margin-bottom: 20px;
-}
-
-.footer_data ul {
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    align-items: flex-start;
-}
-
-.footer_data ul li {
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-.footer_data ul li:hover {
-    text-decoration: underline;
-}
-
-/* Service Code Button */
-.service_code {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 1px solid #fff;
-    padding: 5px 15px;
-    min-width: 120px;
-    text-align: center;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-.service_code:hover {
-    background-color: red;
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Footer Outer Container */
+  .footer_outer_container {
+    background-color: #141414; /* Netflix-like dark background */
     color: white;
-}
-
-/* Copyright Section */
-.copy-write {
-    font-size: 12px;
-    opacity: 0.8;
-    margin-top: 10px;
-}
+    font-family: Arial, sans-serif;
+    padding: 40px 20px; /* Adjust padding as needed */
+    text-align: center;
+  }
+  
+  /* Footer Inner Container */
+  .footer_inner_container {
+    max-width: 1200px; /* Centered layout with max width */
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Space between sections */
+  }
+  
+  /* Social Media Icons */
+  .footer_icons {
+    display: flex;
+    justify-content: center; /* Center the icons horizontally */
+    align-items: center; /* Align icons vertically in the center */
+    gap: 20px; /* Space between icons */
+    margin-top: 20px; /* Add some space above the icons */
+  }
+  
+  .footer_icons .icon {
+    font-size: 2rem; /* Icon size */
+    color: white;
+    transition: color 0.3s ease; /* Smooth hover effect */
+    padding: 5px; /* Add padding around icons to prevent clipping */
+    border-radius: 50%; /* Optional: Make icons circular */
+    background-color: transparent; /* Transparent background */
+    transition: background-color 0.3s ease; /* Smooth hover effect */
+  }
+  
+  .footer_icons .icon:hover {
+    color: #b3b3b3; /* Light gray hover effect */
+    background-color: rgba(255, 255, 255, 0.1); /* Slight background highlight on hover */
+  }
+  
+  /* Footer Links */
+  .footer_data {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Responsive grid */
+    gap: 20px; /* Space between columns */
+    justify-content: center;
+  }
+  
+  .footer_data ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer_data ul li {
+    margin-bottom: 10px; /* Space between links */
+  }
+  
+  .footer_data ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 0.9rem;
+    transition: color 0.3s ease; /* Smooth hover effect */
+  }
+  
+  .footer_data ul li a:hover {
+    color: #b3b3b3; /* Light gray hover effect */
+  }
+  
+  /* Service Code */
+  .service_code {
+    font-size: 0.9rem;
+    color: #b3b3b3;
+    cursor: pointer; /* Add pointer cursor */
+    border: px solid rgba(255, 255, 255, 0.2); /* Light border */
+  padding: 10px; /* Padding inside the border */
+  border-radius: 5px; /* Rounded corners for the border */
+  display: inline-block; /* Ensure the border wraps around the text */
+  }
+  
+  /* Copyright Info */
+  .copy-write {
+    font-size: 0.8rem;
+    color: #b3b3b3;
+    margin-bottom: 10px;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .footer_data {
+      grid-template-columns: 1fr; /* Single column on smaller screens */
+    }
+  
+    .footer_icons {
+      flex-direction: column;
+      gap: 10px; /* Reduce space between icons */
+    }
+  }

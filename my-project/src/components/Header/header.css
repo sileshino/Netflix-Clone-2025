@@ -1,89 +1,82 @@
-.header_outer_container {
-    position: sticky;
-    top: 0;
-    display: flex;
-    justify-content: center; /* Ensures left & right sections are properly spaced */
-    align-items: center;
-    background-color: rgb(20, 20, 20);
-    height: 10vh;
-    width: 100%;  /* Ensures full width */
-    padding: 0 40px; /* Adds proper spacing on left and right */
-    /* background-color: red;  Netflix-style red background */
-    height: 10vh;
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Header Outer Container */
+  .header_outer_container {
+    background-color: #141414; /* Netflix-like dark background */
     color: white;
-    transition: all 0.5s ease-in-out;
-    z-index: 1; /* Ensures it stays above other elements */
-}
-
-/* Styling for the header container */
-.header_container {
+    position: fixed;
+    top: 0;
     width: 100%;
-    max-width: 1200px; /* Prevents excessive stretching on large screens */
-    margin: 0 auto;
+    z-index: 1000;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5); /* Subtle shadow for depth */
+  }
+  
+  /* Header Inner Container */
+  .header_container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
-
-/* Fixes UL list centering issue */
-.header_outer_container ul {
-    list-style: none; /* Removes bullet points (dot issue) */
+    padding: 10px 20px; /* Adjust padding as needed */
+  }
+  
+  /* Left Section - Navigation Menu */
+  .header_left ul {
+    list-style: none;
     display: flex;
-    gap: 20px; 
-    margin: 0;
-    padding: 0;
-}
-
-/* Styling for navigation links */
-.header_outer_container ul li {
-    display: inline-block;
+    align-items: center;
+  }
+  
+  .header_left ul li {
+    margin-right: 20px;
+  }
+  
+  .header_left ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
     font-weight: 500;
+    transition: color 0.3s ease;
+  }
+  
+  .header_left ul li a:hover {
+    color: #b3b3b3; /* Light gray hover effect */
+  }
+  
+  .header_left img {
+    height: 40px; /* Adjust logo size */
+  }
+  
+  /* Right Section - Icons */
+  .header_right ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+  }
+  
+  .header_right ul li {
+    margin-left: 20px;
     cursor: pointer;
-}
-
-/* Netflix-style hover effect */
-.header_outer_container ul li:hover {
-     color: #e50914; /* Netflix red */ 
-    transition: color 0.3s ease-in-out;
-}
-
-/* Class for black navbar when scrolling */
-.nav_black {
-    background-color: rgb(20, 20, 20); 
-}
-
-/* Ensures left navigation list is aligned properly */
-.header_left ul {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-}
-
-/* Ensures logo doesn't stretch */
-.header_left img {
-    width: 100px; /* Adjust width */
-    height: auto;
-}
-
-/* Centers the navigation menu */
-.header_right ul {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-}
-
-/* Responsive Adjustments */
-@media (max-width: 768px) {
-    .header_outer_container {
-        padding: 0 20px;
-    }
-
-    .header_container {
-        flex-direction: column;
-        align-items: center;
-    }
-
+    color: white;
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+  }
+  
+  .header_right ul li:hover {
+    color: #b3b3b3; /* Light gray hover effect */
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
     .header_left ul {
-        flex-direction: column;
+      display: none; /* Hide navigation links on smaller screens */
     }
-}
+  
+    .header_right ul {
+      margin-right: 10px;
+    }
+  }

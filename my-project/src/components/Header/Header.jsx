@@ -1,6 +1,6 @@
 import React from "react";
-import "./header.css";
-import NetflixLogo from "../../assets/images/NetflixLogo.png"; 
+import "./Header.css";
+import NetflixLogo from "../../assets/images/NetflixLogo.png";
 
 // Import Material-UI icons
 import SearchIcon from "@mui/icons-material/Search";
@@ -12,19 +12,17 @@ const Header = () => {
   return (
     <header className="header_outer_container">
       <div className="header_container">
-        
         {/* Left Section - Navigation Menu */}
         <nav className="header_left">
           <ul>
             <li>
               <img src={NetflixLogo} alt="Netflix Logo" width="100" />
             </li>
-            <li>Home</li>
-            <li>TV Shows</li>
-            <li>Movies</li>
-            <li>Latest</li>
-            <li>My List</li>
-            <li>Browse by Language</li>
+            <li><a href="/">Home</a></li>
+            <li><a href="/tv-shows">TV Shows</a></li>
+            <li><a href="/movies">Movies</a></li>
+            <li><a href="/latest">Latest</a></li>
+            <li><a href="/my-list">My List</a></li>
           </ul>
         </nav>
 
@@ -37,10 +35,9 @@ const Header = () => {
             <li><ArrowDropDownIcon /></li>
           </ul>
         </div>
-
       </div>
     </header>
   );
 };
 
-export default Header
+export default Header;

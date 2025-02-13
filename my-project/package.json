@@ -1,5 +1,5 @@
 {
-  "homepage": "https://sileshino.githun.io/Netflix-Clone-2025",
+  "homepage": "https://sileshino.githun.io/Netflix-Clone-2025/my-project",
   "name": "my-project",
   "private": true,
   "version": "0.0.0",
@@ -7,7 +7,7 @@
   "scripts": {
     "dev": "vite",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
+    "deploy": "gh-pages -d dist",
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview"

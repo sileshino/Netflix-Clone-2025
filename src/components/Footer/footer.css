@@ -116,6 +116,7 @@
   color: #b3b3b3; /* Light gray hover effect */
 }
 
+
 /* Responsive Design */
 @media (max-width: 768px) {
   .footer_inner_container {

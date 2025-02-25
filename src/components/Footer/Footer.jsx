@@ -64,6 +64,9 @@ const Footer = () => {
               <li><a href="/contact-us">Contact Us</a></li>
             </ul>
           </div>
+          <div>
+            <p className="develop">Develped By: Sileshi M.</p>
+          </div>
         </div>
       </div>
     </div>

@@ -16,7 +16,7 @@ const Row = ({Title,fetchUrl,isLargeRow}) => {
           return request;
         }
         fetchData();
-      }, [fetchUrl]);//dependancy array
+      }, [fetchUrl]);//dependancy array every time fetchurl change rerun
       // console.log(movies);
       const opts = {
         heighr: "390",
